@@ -2,6 +2,7 @@ FROM node:alpine
 
 ENV BOOT_AS_ROOT=yes
 WORKDIR /app
+EXPOSE 3000
 
 RUN apk add --no-cache bash curl git nano openjdk8 \
 && cd /usr/local/bin && curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot
